@@ -22,8 +22,7 @@ def get_filters():
         city = input("\n Write name of the city you want to check (Chicago, New York City or Washington?)\n").lower()
         if city not in ( 'chicago', 'new york city', 'washington'):
             print("Sorry, try again")
-        else:   
-            break
+        
         
 
     # TO DO: get user input for month (all, january, february, ... , june)
@@ -32,8 +31,7 @@ def get_filters():
         month = input("\n Write name of the month you want to check (January, February, March, April, May, June or type all not to filter by month \n").lower()
         if month not in ( 'all', 'january', 'february', 'march', 'april', 'may', 'june'):
             print("Sorry, try again")
-        else:
-            break
+        
 
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
@@ -42,8 +40,7 @@ def get_filters():
         day = input("\n Write name of the day you want to check (Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday) or type all not to filter by day \n").lower()
         if day not in ('monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday', 'all'):
             print("Sorry, try again")
-        else:
-            break
+        
 
 
     print('-'*40)
@@ -161,8 +158,6 @@ def user_stats(df):
     try:
         gender = df['Gender'].value_counts()
         print(gender)
-    except KeyError:
-        print('gender : no data for this option' )
     # TO DO: Display earliest, most recent, and most common year of birth
     
     # display earliest birth
